@@ -1,0 +1,35 @@
+<div class="table-wrapper">
+    <div class="filters-toolbar" ng-if="$ctrl.isFiltersActive()">
+        <button type="button" class="btn btn-light" ng-click="$ctrl.resetFilters()">X Сбросить фильтры </button>
+    </div>
+    <table class="table table-striped" ng-if="!$ctrl.loading">
+        <thead>
+            <tr>
+                <th ng-repeat="key in $ctrl.formKeys">{{$ctrl.tableColNames[key]}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td ng-repeat="key in $ctrl.formKeys">
+                    <input type="text" ng-model="$ctrl.filtersform[key]" ng-change="$ctrl.onInputChange()"
+                        class="form-control form-control-sm" placeholder="">
+                </td>
+            </tr>
+            <tr ng-repeat="item in $ctrl.filteredData">
+                <td ng-repeat="key in $ctrl.formKeys">
+                    <div ng-if="key === 'object_title'" class="col-title">
+                        <span>{{item[key]}}</span>
+                        <a ng-link="['ObjectDetail', {id: item.object_name}]" class="btn btn-primary btn-sm"
+                            role="button">
+                            Подробнее</a>
+                    </div>
+                    <span ng-if="key!== 'object_title'">{{item[key]}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div ng-if="$ctrl.loading">
+        Загрузка данных...
+    </div>
+</div>

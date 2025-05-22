@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <title>Objects app</title>
+  <link href="/styles.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <script src="/js/lib/angular.min.js"></script>
+  <script src="/core/consts.js"></script>
+  <script src="/core/mappers/object.mapper.js"></script>
+  <script src="/core/services/objects.api.service.js"></script>
+  <script src="/core/services/storage.service.js"></script>
+  <script src="/components/objects-list/objects-list.component.js"></script>
+  <script src="/components/object-details/object-details.component.js"></script>
+  <script src="/js/app.js"></script>
+
+  <script type="text/javascript">
+    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+  </script>
+</head>
+
+<body ng-app="app">
+  <nav class="navbar ">
+    <span class="navbar-brand mb-0 h1"> Objects app</span>
+  </nav>
+  <app></app>
+  <script src="https://unpkg.com/@angular/router@0.2.0/angular1/angular_1_router.js"></script>
+</body>
+
+</html>

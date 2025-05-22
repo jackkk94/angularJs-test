@@ -1,0 +1,40 @@
+<div class="table-wrapper">
+    <div>
+        <a ng-link="['ObjectsList']" class="btn btn-light btn-sm"
+        role="button">
+        <- Вернуться</a>
+    </div>
+
+    <table class="table table-striped table-details" ng-if="!$ctrl.loading && $ctrl.data">
+        <tbody>
+            <tr>
+                <td>Обьект</td>
+                <td>{{$ctrl.data.object_title}}</td>
+            </tr>
+            <tr>
+                <td>Имя</td>
+                <td>{{$ctrl.data.object_name}}</td>
+            </tr>
+            <tr>
+                <td>Тип</td>
+                <td>{{$ctrl.data.object_type}}</td>
+            </tr>
+            <tr>
+                <td>Единицы измерения</td>
+                <td>{{$ctrl.data.uom}}</td>
+            </tr>
+            <tr>
+                <td>Производитель</td>
+                <td>{{$ctrl.data.manufacturer}}</td>
+            </tr>
+            <tr>
+                <td>Плотность</td>
+                <td>{{$ctrl.data.density}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div ng-if="$ctrl.loading">
+        Загрузка данных...
+    </div>
+</div>

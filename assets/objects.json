@@ -1,0 +1,28 @@
+{
+  "objects": [
+    {
+      "item_id": "GT.010.5.563.003",
+      "item_revision_id": "A",
+      "object_name": "Kingpin",
+      "object_type": "Part",
+      "uom": 0
+    },
+    {
+      "item_id": "DIN 912 M8x0.75",
+      "item_revision_id": "00",
+      "object_name": "Screw",
+      "object_type": "StdPart",
+      "manufacturer": "Bosch",
+      "uom": 0
+    },
+    {
+      "item_id": "Sikaflex-221",
+      "item_revision_id": "00",
+      "object_type": "Material",
+      "object_name": "Sealant",
+      "manufacturer": "SIKA",
+      "density": 1.5,
+      "uom": 2
+    }
+  ]
+}
